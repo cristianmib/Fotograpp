@@ -49,8 +49,7 @@ import java.util.Date;
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = null;
         image = File.createTempFile(
-                imageFileName, /* prefix
-        );
+                imageFileName,".jpg",storageDir);
 
         // Save a file: path for use with ACTIO/* prefix */
         //                ".png",         /* N_VIEW intents
@@ -63,7 +62,7 @@ import java.util.Date;
 
     static final int REQUEST_TAKE_PHOTO = 1;
 
-    private void tomarFoto(View view) {
+    public void tomarFoto(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Ensure that there's a camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
