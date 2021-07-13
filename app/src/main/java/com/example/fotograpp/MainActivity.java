@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+    public class MainActivity extends AppCompatActivity {
 
     private ImageView img;
 
@@ -47,16 +47,19 @@ public class MainActivity extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".png",         /* suffix */
-                storageDir      /* directory */
+        File image = null;
+        image = File.createTempFile(
+                imageFileName, /* prefix
         );
 
-        // Save a file: path for use with ACTION_VIEW intents
+        // Save a file: path for use with ACTIO/* prefix */
+        //                ".png",         /* N_VIEW intents
         currentPhotoPath = image.getAbsolutePath();
         return image;
-    }
+
+        }
+
+
 
     static final int REQUEST_TAKE_PHOTO = 1;
 
